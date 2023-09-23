@@ -5,6 +5,7 @@ import App from "./pages/App";
 import Error from "./pages/Error";
 import Example from "./pages/Example";
 import MyForm from "./pages/Form";
+import Day from "./pages/Day";
 
 const queryClient = new QueryClient()
 
@@ -20,6 +21,10 @@ const router = createHashRouter([
       {
         path: "form",
         element: <MyForm />,
+      },
+      {
+        path: "day",
+        element: <Day />,
       },
       {
         path: "example/:id",

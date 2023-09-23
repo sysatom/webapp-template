@@ -14,6 +14,9 @@ function App() {
         <Link to={`form`}>
           <Button colorScheme='green' size='lg'>Form</Button>
         </Link>
+        <Link to={`day`}>
+          <Button colorScheme='gray' size='lg'>Day</Button>
+        </Link>
       </header>
     </div>
   );
