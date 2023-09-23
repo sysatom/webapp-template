@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import Example from "./pages/example";
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
@@ -19,6 +23,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <QueryClientProvider client={queryClient}>
+        <Example />
+      </QueryClientProvider>
     </div>
   );
 }
