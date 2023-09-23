@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.sass';
 import {Link} from "react-router-dom";
+import {Button} from "@chakra-ui/react";
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to={`example/1`}>Example</Link>
+        <Link to={`example/1`}>
+          <Button colorScheme='blue' size='lg'>Example</Button>
+        </Link>
       </header>
     </div>
   );
