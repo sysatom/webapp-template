@@ -11,6 +11,9 @@ function App() {
         <Link to={`example/1`}>
           <Button colorScheme='blue' size='lg'>Example</Button>
         </Link>
+        <Link to={`form`}>
+          <Button colorScheme='green' size='lg'>Form</Button>
+        </Link>
       </header>
     </div>
   );
