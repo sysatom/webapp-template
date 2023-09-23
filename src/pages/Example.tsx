@@ -1,9 +1,11 @@
 import axios from "axios";
 import {useQuery} from "@tanstack/react-query";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
-
+import {useNavigate} from "react-router-dom";
 
 function Example() {
+  const navigate = useNavigate();
+
   const { isLoading, error, data, isFetching } = useQuery({
     queryKey: ['repoData'],
     queryFn: () =>
@@ -24,6 +26,14 @@ function Example() {
       <strong>✨ {data.stargazers_count}</strong>{' '}
       <strong>🍴 {data.forks_count}</strong>
       <div>{isFetching ? 'Updating...' : ''}</div>
+      <button
+        type="button"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button>
       <ReactQueryDevtools initialIsOpen />
     </div>
   )
